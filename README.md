@@ -2,6 +2,8 @@
 
 This timer can alert you every `n` seconds.
 
+[Click here](https://ms16183.github.io/loop-timer/).
+
 # Usage
 Open html on Web browser and enable JavaScript.
 
