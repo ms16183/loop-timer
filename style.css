@@ -1,0 +1,50 @@
+body {
+  width         : 50%;
+  text-align    : center;
+  margin-left   : auto;
+  margin-right  : auto;
+  color         : #364e96;
+  border        : solid 3px #364e96;
+  padding       : 0.5em;
+  border-radius : 0.5em;
+  text-align    : center;
+}
+
+h1 {
+  padding : 0.01em;
+  color   : #364e96;
+}
+
+hr {
+  border-top : 3px dashed #364e96;
+}
+
+.seconds {
+  width: 2.5em;
+}
+
+.button {
+  display       : inline-block;
+  border-radius : 5%;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 11px 11px;
+  padding-left  : 33px;
+  padding-right : 33px;
+  margin-top    : 20px;
+  margin-bottom : 20px;
+  background    : #ffffff;
+  color         : #6666ff;
+  line-height   : 1em;
+  transition    : .3s;
+  border        : 2px solid #364e96;
+}
+.button:hover {
+  color         : #ffffff;
+  background    : #6666ff;
+  border        : 2px solid #6666ff;
+}
+
+.time {
+  font-size: 50px;
+}
