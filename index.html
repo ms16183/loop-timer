@@ -10,11 +10,17 @@
     <hr>
     <div>
       <label for="seconds">Alert you every</label>
-      <input id="seconds" class="seconds" type="search" name="seconds" value=3>
+      <input id="seconds" class="seconds" type="number" min="1" name="seconds" value=3 required>
       <label for="seconds">seconds.</label>
       <br>
       <input id="start" class="button" type="button" name="start" value="Start" onclick="start();">
       <input id="stop" class="button" type="button" name="stop" value="Stop" onclick="stop();">
+      <br>
+    </div>
+    <div>
+      <pre>
+        <code id="time">00:00</code>
+      </pre>
     </div>
   </body>
 </html>
