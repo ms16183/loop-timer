@@ -1,8 +1,9 @@
-var sec_sound = new Audio("./sec.mp3");
-var min_sound = new Audio("./min.mp3");
-var alert_sound = new Audio("./alert.mp3");
+var sec_sound = new Howl({src:["./sec.mp3"]});
+var min_sound = new Howl({src:["./min.mp3"]});
+var alert_sound = new Howl({src:["./alert.mp3"]});
 var timer;
 var running;
+
 function start(){
   if(running){
     return;
@@ -23,19 +24,16 @@ function start(){
     document.getElementById("time").innerHTML =
       ("0" + parseInt(sec/60)).slice(-2) + ":" + ("0" + parseInt(sec%60)).slice(-2);
 
-    if(sec % 60 == 0){
-      min_sound.pause();
-      min_sound.currentTime = 0;
+    if(sec % 60 == 0 && document.getElementById("sound-min-enable").checked){
+      min_sound.stop();
       min_sound.play();
     }
     else if(sec % n == 0){
-      alert_sound.pause();
-      alert_sound.currentTime = 0;
+      alert_sound.stop();
       alert_sound.play();
     }
-    else{
-      sec_sound.pause();
-      sec_sound.currentTime = 0;
+    else if(sec % 1 == 0 && document.getElementById("sound-sec-enable").checked){
+      sec_sound.stop();
       sec_sound.play();
     }
   }, 1000);
